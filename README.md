@@ -33,3 +33,6 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org --browser=firefox -n2
 ```
 
+4. Отключить все ноды
+Ничего, кроме Ctrl+C не нашел.
+
