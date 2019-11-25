@@ -15,10 +15,12 @@ How to run tests locally whith Selenium Grid
 ------------------------
 
 1. Запуск хаба:
+
 `java -jar selenium-server-standalone.jar -role hub`
 
-- Запуск хаба с hubConfig.json:
-java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json`
+1.1 Запуск хаба с hubConfig.json:
+
+`java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json`
 
 2. Запуск 4-х нод вручную, 2 ноды с chrome, две ноды c firefox:
 (Ничего лучше не прдумал, чем запустить в четырех вкладках терминала по команде:
