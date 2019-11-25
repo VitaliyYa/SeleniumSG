@@ -18,7 +18,7 @@ How to run tests locally whith Selenium Grid
 
 `java -jar selenium-server-standalone.jar -role hub`
 
-1.1 Запуск хаба с hubConfig.json:
+1.1. Запуск хаба с hubConfig.json:
 
 `java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json`
 
