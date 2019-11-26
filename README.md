@@ -57,4 +57,8 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 и в Firefox:
 `py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org -n2`
 
+Для удобства в Pycharm настроил Run Configurations.  
+в строку Keywords `smoke`  
+в строку Additional Arguments `--executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org --browser=chrome -n2`
+
 ### 8. Done.
