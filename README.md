@@ -48,11 +48,12 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 по ней норм запустилось, так и оставил.
 
 ### 6. Запуск нод с помощью конфигурационных файлов nodeConfig.json
-Для ускорения запуска хаба и нод сделал [скрипт](startSG.sh)
+Для ускорения запуска хаба и нод сделал [скрипт](startSG.sh) Володя, дякую! =)
 
 ### 7. Запуск smoke тестов в 2 потока на гриде, сначала на Chrome, потом на Firefox
 Команды для запуска в Chrome:
 `py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org --browser=chrome -n2`
+
 и в Firefox:
 `py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org -n2`
 
