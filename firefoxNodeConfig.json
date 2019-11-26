@@ -1,1 +1,22 @@
-
+{
+  "capabilities": [
+    {
+      "browserName": "firefox",
+      "marionette": true,
+      "maxInstances": 1,
+      "seleniumProtocol": "WebDriver"
+    }
+  ],
+"configuration": {
+    "_comment" : "Configuration for Node with Firefox",
+    "cleanUpCycle": 2000,
+    "timeout": 300,
+    "proxy": "org.openqa.grid.selenium.proxy.WebDriverRemoteProxy",
+    "host": ip,
+    "register": true,
+    "hubPort": 4444,
+    "maxSession": 1,
+    "newSessionWaitTimeout": 10,
+    "timeout": 10,
+    "debug": false
+  }
