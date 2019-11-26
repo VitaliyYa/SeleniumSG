@@ -41,3 +41,7 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 ### 4. Отключить все ноды
 Ничего, кроме Ctrl+C не нашел.
 
+### 5. Настройки для нод с помощью nodeConfig.json
+Файлы: [для Chrome](cromeNodeConfig.json) и [для Firefox](firefoxNodeConfig.json)
+
+
