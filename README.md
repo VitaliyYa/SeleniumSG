@@ -125,3 +125,22 @@ docker network prune
 # OR Removes the grid network
 docker network rm grid
 ```
+
+### 3. Установка docker-compose. Запуск Selenium Grid в docker с помощью docker-compose
+Установка docker-compose тоже очеь проста:
+```
+Sudo apt install docker-compose
+```
+Для запуска создать файл `docker-compose.yaml` локально и запускать сетку из папки командой:
+```
+docker-compose up -d
+```
+Запустится по одному экземпляру браузеров Chrome и Firefox.  
+Для запуска 2-х экземпляров Chrome и 2-х Firefox:
+```
+docker-compose up --scale chrome=2 firefox=2 -d
+```
+Для остановки сети и очистки созданных контейнеров команда:
+```
+docker-compose down
+```
