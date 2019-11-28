@@ -118,3 +118,10 @@ docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/
 Посмотреть консоль хаба можно по адресу: `http://127.0.0.1:4444/grid/console`  
 В каждой ноде по одному экзмпляру браузера.
 
+После окончания работы с сеткой и закрытия контейнеров можно удалить сеть grid:
+```
+# Remove all unused networks
+docker network prune
+# OR Removes the grid network
+docker network rm grid
+```
