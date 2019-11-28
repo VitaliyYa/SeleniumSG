@@ -69,3 +69,52 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 1. Установите docker в вашей ОС, например, https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
 2. Научитесь запускать Selenium Grid в docker с помощью docker networking https://github.com/SeleniumHQ/docker-selenium#using-docker-networking. У вас должно быть запущено две ноды с Chrome и две ноды с Firefox. Попробуйте запустить smoke-тесты в два потока на гриде. Сохраните команды для запуска в readme вашего репозитория.
 3. Установите docker-compose. Научитесь запускать Selenium Grid в docker с помощью docker-compose https://github.com/SeleniumHQ/docker-selenium#version-3. У вас должно быть запущено две ноды с Chrome и две ноды с Firefox. Попробуйте запустить smoke-тесты в два потока на гриде. Сохраните команды для запуска в readme вашего репозитория.
+
+=================================================
+
+### 1. Установка docker
+Установка докер очень проста:  
+```
+sudo apt-get update
+sudo apt-get install -y docker.io
+```
+
+Запуск Docker:
+```
+sudo systemctl start docker
+```
+Добавление docker в автозапуск:
+```
+sudo systemctl enable docker
+```
+или комбо из двух команд:
+```
+sudo systemctl start docker && sudo systemctl enable docker
+```
+
+Чтобы убедиться, что Docker работает, можно запустить команду:
+```
+sudo systemctl status docker
+```
+
+### 2. Запуск Selenium Grid в docker с помощью docker networking
+Тоже достаточно всё просто:
+Сначала создется сеть **grid**:  
+```
+docker network create grid
+```
+Запуск хаба:
+```
+docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.141.59-xenon
+```
+Запуск ноды с браузером Chrome:
+```
+docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-chrome:3.141.59-xenon
+```
+Запуск ноды с браузером Firefox:
+```
+docker run -d --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/node-firefox:3.141.59-xenon
+```
+Посмотреть консоль хаба можно по адресу: `http://127.0.0.1:4444/grid/console`  
+В каждой ноде по одному экзмпляру браузера.
+
