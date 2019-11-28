@@ -138,7 +138,7 @@ docker-compose up -d
 Запустится по одному экземпляру браузеров Chrome и Firefox.  
 Для запуска 2-х экземпляров Chrome и 2-х Firefox:
 ```
-docker-compose up --scale chrome=2 firefox=2 -d
+docker-compose up --scale chrome=2 --scale firefox=2 -d
 ```
 Для остановки сети и очистки созданных контейнеров команда:
 ```
