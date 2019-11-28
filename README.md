@@ -62,3 +62,10 @@ py.test -s -m smoke --executor=http://localhost:4444/wd/hub --domain=https://sta
 в строку Additional Arguments `--executor=http://localhost:4444/wd/hub --domain=https://staging1.int.stepik.org --browser=chrome -n2`
 
 ### 8. Done.
+
+------------------------------------------------
+
+## Запуск Selenium Grid в докере
+1. Установите docker в вашей ОС, например, https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
+2. Научитесь запускать Selenium Grid в docker с помощью docker networking https://github.com/SeleniumHQ/docker-selenium#using-docker-networking. У вас должно быть запущено две ноды с Chrome и две ноды с Firefox. Попробуйте запустить smoke-тесты в два потока на гриде. Сохраните команды для запуска в readme вашего репозитория.
+3. Установите docker-compose. Научитесь запускать Selenium Grid в docker с помощью docker-compose https://github.com/SeleniumHQ/docker-selenium#version-3. У вас должно быть запущено две ноды с Chrome и две ноды с Firefox. Попробуйте запустить smoke-тесты в два потока на гриде. Сохраните команды для запуска в readme вашего репозитория.
