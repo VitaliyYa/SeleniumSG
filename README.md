@@ -131,7 +131,7 @@ docker network rm grid
 ```
 Sudo apt install docker-compose
 ```
-Для запуска создать файл `[docker-compose.yaml](docker-compose.yaml)` локально и запускать сетку из папки командой:
+Для запуска создать файл [docker-compose.yaml](docker-compose.yaml) локально и запускать сетку из папки командой:
 ```
 docker-compose up -d
 ```
