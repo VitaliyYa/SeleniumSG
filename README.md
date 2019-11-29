@@ -131,7 +131,7 @@ docker network rm grid
 ```
 Sudo apt install docker-compose
 ```
-Для запуска создать файл `docker-compose.yaml` локально и запускать сетку из папки командой:
+Для запуска создать файл `[docker-compose.yaml](docker-compose.yaml)` локально и запускать сетку из папки командой:
 ```
 docker-compose up -d
 ```
@@ -144,3 +144,25 @@ docker-compose up --scale chrome=2 --scale firefox=2 -d
 ```
 docker-compose down
 ```
+-------------------------------------------
+### Allure-отчеты
+Установка: просто скачать скопировать в папку и запускать локально из папки `allure/bin`  
+При таком способе указывать путь запуска из локальной папки `./`  
+```
+./allure --version
+```
+
+Установка allure-pytest:
+```
+pip install allure-pytest
+```
+
+В папке с тестами создать каталог для отчетов `allure-results`. Запускать тесты с параметром `--alluredir` указав папку для отчетов:
+```
+--alluredir=./allure-results
+```
+После прогона тестов запустить сервер allure для ганерации и вывода отчета в браузере:
+```
+./allure serve [путь до папки allure-results]
+```
+[Документация](https://docs.qameta.io/allure/) по Allure Framework.
